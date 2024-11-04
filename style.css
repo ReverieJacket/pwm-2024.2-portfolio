@@ -1,10 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 body{
-    background: #C9D5D4;
+    background: #F2E4DA; /* #F2E4DA or #C9D5D4 */
+    overflow: auto;
 }
 
-#home h1 {
+.sidebar-left {
+    width: 10%;
+    background-color: #70bcd1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.vertical-text {
+writing-mode: vertical-rl;
+transform: rotate(180deg);
+margin-top: 50px;
+font-size: 12px;
+}
+
+#introduction{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-left: 10%;
+    padding: 20px;
+}
+
+h1 {
     font-family: "Space Grotesk", serif;
     font-weight: 400;
+    font-size: 5rem;
     color: #410807; 
+    margin: 0;
+    line-height: 1.2;
 }
+
+.sidebar-right {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 100px;
+}
+
+.nav-list {
+    list-style: none;
+    text-align: right;
+  }
+  
+  .nav-list li {
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #2b0205;
+    border-radius: 50%;
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+  
+  .nav-list li:hover .dot {
+    transform: scale(1.5);
+  }
+  
