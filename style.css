@@ -31,17 +31,22 @@ h1 {
 #core-competences{
   flex-direction: column;
   overflow: hidden;
+  padding: 0;
 }
+
 
 .above , .bellow{
   display: flex;
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
 }
 
-.above h1, .bellow h1 {
+.above h1, .bellow h1, .list a {
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px;
+  -webkit-text-stroke: 1.3px;
+  font-size: 96px;
+  font-weight: 800;
+  font-family: Helvetica, sans-serif;
 }
 
 .above ul, .bellow ul{
@@ -51,24 +56,86 @@ h1 {
   min-width: 100%;
   display: flex;
   gap: 1rem;
-  animation: scroll 30s linear infinite;
+  align-items:center;
+  pointer-events: none;
+}
+.above ul{
+  animation: scroll-left 30s linear infinite;
+}
+.bellow ul{
+  animation: scroll-right 30s linear infinite;
 }
 
-@keyframes scroll{
-  from {
-    transform: translateX(100%); /* Começa da direita */
+.above:hover ul,.bellow:hover ul{
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left{
+  to{
+    transform: translateX(calc(-100% - 1rem));
+  }
+} 
+
+@keyframes scroll-right{
+  from{
+    transform: translateX(calc(-100% - 1rem));
   }
   to{
-    transform: translateX(-100%);
+    transform: translateX(calc(0%));
   }
 } 
 
 p{
   color: #410807; 
 }
+#work{
+  width: 550px;
+}
+#work h1{
+  font-size: 57.6px;
+}
+#stray{
+  align-self: flex-start;
+  padding-left: 120px;
+  position: relative;
+  top: -70px;
+}
+#stray > h1{
+  font-size: 57.6px;
+}
 
 .content{
   justify-content: start;
+}
+
+.list{
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 180px;
+}
+
+
+.list  a{
+  list-style: none;
+  color: #410807;
+  text-align: center;
+}
+.revealer {
+  text-decoration:none;
+}
+.revealer span {
+  display:none;
+}
+.revealer:hover span {
+  display:block;
+  position:fixed;
+  overflow:hidden;
+}
+#eisen{
+  width:250px;
+}
+#savesite{
+  width:640px;
 }
 
 .content > h1{
@@ -127,14 +194,11 @@ section:nth-of-type(even){
     right: 24px;
     top: 50%;
     transform: translate(4px,-55%);
-    background: #410807;
-    border-radius: 25px;
-    color: white;
+    color:#410807;
     font-weight: bold;
     padding: 2px 16px;
-    font-size: 13px;
+    font-size: 17px;
     pointer-events: none;
-    box-shadow: 0 7px 14px -6px rgba(0, 0, 0, 0.8);
     opacity: 0;
     transition: all 400ms ease;
 }
