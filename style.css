@@ -19,21 +19,109 @@ section {
     background: #F2E4DA;
     padding-left: 120px;
 }
+
+section:nth-of-type(even){
+  background: #C9D5D4;
+}
+
 #home{
   padding-right: 90px;
 }
+
 h1 {
     font-weight: 400;
     font-size: 5rem;
     color: #410807; 
     line-height: 1.2;
 }
+
+.heading > h1{
+  font-size: 57.6px;
+}
+
+.content{
+  justify-content: start;
+}
+
+.content > h1{
+  max-width: 500px;
+  font-size: 57.6px;
+}
+
+section > p {
+  color: #410807;
+  box-sizing: content-box;
+  width: 520px;
+  padding-left: 180px;
+  padding-top: 30px;
+  font-size: 17px;
+}
+
+#work{
+  width: 550px;
+}
+
+#mini{
+  font-size: 15px;
+}
+
+#work p, #also p {
+  color: #410807;
+}
+
+#game, #also a{
+  font-weight: bold;         
+  color: inherit;            
+  text-decoration: none; 
+  cursor: pointer;  
+}
+
+.list{
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 180px;
+}
+
+.list  a{
+  list-style: none;
+  color: #410807;
+  text-align: center;
+}
+
+.revealer {
+  text-decoration:none;
+}
+
+.revealer span {
+  display:none;
+}
+
+.revealer:hover span {
+  display:block;
+  position:fixed;
+  overflow:hidden;
+}
+
+#eisen{
+  width:250px;
+}
+
+#savesite{
+  width:640px;
+}
+
 #core-competences{
   flex-direction: column;
   overflow: hidden;
   padding: 0;
 }
 
+#stray{
+  align-self: flex-start;
+  padding-left: 120px;
+  position: relative;
+  top: -70px;
+}
 
 .above , .bellow{
   display: flex;
@@ -41,12 +129,13 @@ h1 {
   gap: 1rem;
 }
 
-.above h1, .bellow h1, .list a {
+.above h1, .bellow h1, .list a, #mail {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1.3px;
   font-size: 96px;
   font-weight: 800;
   font-family: Helvetica, sans-serif;
+  color: #410807;
 }
 
 .above ul, .bellow ul{
@@ -58,16 +147,6 @@ h1 {
   gap: 1rem;
   align-items:center;
   pointer-events: none;
-}
-.above ul{
-  animation: scroll-left 30s linear infinite;
-}
-.bellow ul{
-  animation: scroll-right 30s linear infinite;
-}
-
-.above:hover ul,.bellow:hover ul{
-  animation-play-state: paused;
 }
 
 @keyframes scroll-left{
@@ -85,78 +164,42 @@ h1 {
   }
 } 
 
-p{
-  color: #410807; 
+.above ul{
+  animation: scroll-left 30s linear infinite;
 }
-#work{
-  width: 550px;
+.bellow ul{
+  animation: scroll-right 30s linear infinite;
 }
-#work h1{
-  font-size: 57.6px;
+
+.above:hover ul,.bellow:hover ul{
+  animation-play-state: paused;
 }
-#stray{
+
+#contact{
+  flex-direction: column;
+}
+
+#stray-2{
+  width: 67%;
   align-self: flex-start;
-  padding-left: 120px;
-  position: relative;
-  top: -70px;
-}
-#stray > h1{
-  font-size: 57.6px;
+  transform: translateY(-156px);
 }
 
-.content{
-  justify-content: start;
+#mail{
+  display: flex;
+  font-size: 70px ;
+  text-decoration: none;
+  line-height: 50px;
+  transform: translate(-60px, -80px);
 }
 
-.list{
-  width: 50%;
-  box-sizing: border-box;
-  padding-left: 180px;
+#mail:hover{
+  -webkit-text-fill-color: #410807;
 }
 
-
-.list  a{
-  list-style: none;
-  color: #410807;
-  text-align: center;
+#also{
+  transform: translate(250px, 70px);
 }
-.revealer {
-  text-decoration:none;
-}
-.revealer span {
-  display:none;
-}
-.revealer:hover span {
-  display:block;
-  position:fixed;
-  overflow:hidden;
-}
-#eisen{
-  width:250px;
-}
-#savesite{
-  width:640px;
-}
-
-.content > h1{
-  max-width: 500px;
-  font-size: 57.6px;
-}
-
-
-section > p {
-  box-sizing: content-box;
-  width: 520px;
-  padding-left: 180px;
-  padding-top: 30px;
-  font-size: 17px;
-}
-
-section:nth-of-type(even){
-    background: #C9D5D4;
-}
-
-
 
 .scroll-indicator {
     position: fixed;
@@ -208,4 +251,33 @@ section:nth-of-type(even){
     transform: translate(0, -50%);
 }
 
+#game-container {
+  background: #F2E4DA;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+  height: 100vh; 
+}
+
+#interface {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 8px; 
+  padding-right: 0.5px;
+}
+#guessList{
+  text-align: left;
+}
+
+.interactive {
+  font-family: "Space Grotesk", sans-serif;
+  width: 270px;      
+  height: 40px;     
+  font-size: 16px;   
+  padding: 8px;      
+  box-sizing: border-box; 
+}
 

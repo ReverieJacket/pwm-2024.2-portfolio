@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Senha (Bulls and Cows)</title>
+    <!-- Incluindo o arquivo de estilo externo -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="side.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Jogo Senha (Bulls and Cows)</h1>
+        <div id="interface">
+            <input type="number" class="interactive" placeholder="Digite um número de 4 dígitos" maxlength="4">
+            <button class="interactive" onclick="makeGuess()">Enviar Palpite</button>
+            <button class="interactive" onclick="showSecret()">Mostrar Senha</button>
+            <button class="interactive">Reset</button>
+            <ul id="guessList" class="reversed"></ul>
+        </div>
+    </div>
+</body>
+</html>
