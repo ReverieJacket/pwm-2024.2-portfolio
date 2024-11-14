@@ -60,7 +60,7 @@ function displayAttempts() {
     const guessList = document.getElementById("guessList");
     guessList.innerHTML = '';
 
-    attempts.slice().forEach((attempt) => {
+    attempts.slice().reverse().forEach((attempt) => {
         const listItem = document.createElement("li");
         listItem.className = "guessItem";
         listItem.textContent = `Palpite: ${attempt.guess} | Bulls: ${attempt.result.bulls}, Cows: ${attempt.result.cows}`;
