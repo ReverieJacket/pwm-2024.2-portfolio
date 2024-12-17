@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main-style.css">
     <script defer src="javaScript/main.js"></script>
     <title>Portfolio Marcus</title>
 </head>
@@ -23,6 +23,7 @@
             Tenho interesse em construir experiências de usuário altamente polidas e sistemas voltados à gestão pessoal e produtividade!
         </h1>
     </section>
+
     <section id="background" class="content">
         <h1>
             Qual o meu background?
@@ -38,6 +39,7 @@
         </p>
 
     </section>
+
     <section id="current-activity" class="content">
         <h1>
             O que estou fazendo agora?
@@ -50,20 +52,20 @@
     </section>
     <section id="projects" class="content">
         <div id="work" class="heading">
-            <h1>Projetos em que trabalhei <span id="mini">(Passe o mouse para visualizar)</span></h1> 
+            <h1>Projetos em que trabalhei <span class="mini"> (Passe o mouse para visualizar)</span> </h1> 
             <br><br>
             <p>
                 <strong>Eisen:</strong> um organizador de tarefas para Android baseado na matriz de Eisenhower. Trabalhei no Front-End.<br><br>
-                <strong>SaveSite:</strong> um site read-it-later com features para evitar o acúmulo de conteúdo salvo que não é revisitado e facilitar a exploração de informações correlacionadas da web. Trabalhei no Back-End.<br><br>
                 <strong>Kanban:</strong> um site de quadro Kanban para gerenciar tarefas de um projeto. Trabalhei no Front-End.<br><br>
-                Todos foram projetos em grupo de disciplinas do curso e são protótipos não finalizados.
+                <strong>SaveSite:</strong> um site read-it-later com features para evitar o acúmulo de conteúdo salvo que não é revisitado e facilitar a exploração de informações correlacionadas da web. Trabalhei no Back-End.<br><br>
+                Todos foram projetos em grupo de disciplinas do curso e são protótipos não finalizados. O acesso ao repositório pode ser feito clicando no nome do projeto.
                 <br><br>
             </p>
         </div>
         <div class="list">
             <a class="revealer" href="https://github.com/ReverieJacket/Jetpack-Compose-Gerenciador-de-Tarefas">Eisen<span><img id="eisen" alt="" src="imagens/eisen.jpg" /></span></a>
-            <a class="revealer" href="https://github.com/ReverieJacket/Jetpack-Compose-Gerenciador-de-Tarefas">SaveSite<span><img id="savesite" src="imagens/savesite.jpg" /></span></a>
             <a class="revealer" href="https://github.com/ReverieJacket/Kanban-Board.git">Kanban<span><img id="savesite" src="imagens/kanban.png" /></span></a>
+            <a class="revealer" href="https://github.com/ReverieJacket/SaveSite">SaveSite<span><img id="savesite" src="imagens/savesite.jpg" /></span></a>
         </div>
     </section>
     <section id="core-competences">
@@ -130,5 +132,25 @@
             <p>Você também pode me achar no <a href="https://www.linkedin.com/in/marcus-vinicius-gon%C3%A7alves-94865b250/">LinkedIn</a> e no <a href="https://github.com/ReverieJacket">GitHub</a>.</p>
         </div>
     </section>
+    <script>
+function checkResolution() {
+      if (window.innerWidth < 1500 || window.innerHeight < 582) {
+        window.location.href = "pages/responsivo.html"; // Caminho correto para a página secundária
+      }
+    }
+
+    // Função debounce para evitar redirecionamentos contínuos
+    let debounce;
+    window.addEventListener("resize", () => {
+      clearTimeout(debounce);
+      debounce = setTimeout(checkResolution, 200);
+    });
+
+    // Verifica ao carregar a página
+    checkResolution();
+      </script>      
+
 </body>
 </html>
+
+

@@ -1,42 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
+
 *{
   margin: 0;
-}
-body{
-    font-family: "Space Grotesk", sans-serif;
+  border: 0;
+  box-sizing: border-box;
 }
 
+html, body, section{
+  width: 100vw;
+  max-width: 100%;
+  height: 100%;
+}
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Space Grotesk", sans-serif;
 }
 
 section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: #F2E4DA;
-    padding-left: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-height: 100vh;
+  background: #F2E4DA;
+  padding-left: 7.5rem;
+  overflow: auto;
+}
+
+#home{
+  padding-right: 4.625rem;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 5rem;
+  color: #410807; 
+  line-height: 1.2;
 }
 
 section:nth-of-type(even){
   background: #C9D5D4;
-}
-
-#home{
-  padding-right: 90px;
-}
-
-h1 {
-    font-weight: 400;
-    font-size: 5rem;
-    color: #410807; 
-    line-height: 1.2;
-}
-
-.heading > h1{
-  font-size: 57.6px;
 }
 
 .content{
@@ -44,25 +51,29 @@ h1 {
 }
 
 .content > h1{
-  max-width: 500px;
-  font-size: 57.6px;
+  max-width: 31.25rem;
+  font-size: 3.6rem;
+}
+.heading > h1{
+  font-size: 3.6rem;
 }
 
 section > p {
   color: #410807;
   box-sizing: content-box;
-  width: 520px;
-  padding-left: 180px;
-  padding-top: 30px;
-  font-size: 17px;
+  width: 32.5rem;
+  padding-left: 11.25rem;
+  padding-top: 1.875rem;
+  font-size: 1.063rem;
 }
+
 
 #work{
-  width: 550px;
+  width: 34.375rem;
 }
 
-#mini{
-  font-size: 15px;
+.mini{
+  font-size: 0.938rem;
 }
 
 #work p, #also p {
@@ -79,7 +90,7 @@ section > p {
 .list{
   width: 50%;
   box-sizing: border-box;
-  padding-left: 180px;
+  padding-left: 11.25rem;
 }
 
 .list  a{
@@ -103,11 +114,11 @@ section > p {
 }
 
 #eisen{
-  width:250px;
+  width: 15.625rem;
 }
 
 #savesite{
-  width:640px;
+  width: 40rem;
 }
 
 #core-competences{
@@ -118,9 +129,9 @@ section > p {
 
 #stray{
   align-self: flex-start;
-  padding-left: 120px;
+  padding-left: 7.5rem;
   position: relative;
-  top: -70px;
+  top: -4.375rem;
 }
 
 .above , .bellow{
@@ -131,8 +142,8 @@ section > p {
 
 .above h1, .bellow h1, .list a, #mail {
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.3px;
-  font-size: 96px;
+  -webkit-text-stroke: 0.081rem;
+  font-size: 6rem;
   font-weight: 800;
   font-family: Helvetica, sans-serif;
   color: #410807;
@@ -182,15 +193,15 @@ section > p {
 #stray-2{
   width: 67%;
   align-self: flex-start;
-  transform: translateY(-156px);
+  transform: translateY(-9.75rem);
 }
 
 #mail{
   display: flex;
-  font-size: 70px ;
+  font-size: 4.375rem;
   text-decoration: none;
-  line-height: 50px;
-  transform: translate(-60px, -80px);
+  line-height: 3.125rem;
+  transform: translate(-3.75rem, -5rem);
 }
 
 #mail:hover{
@@ -198,28 +209,28 @@ section > p {
 }
 
 #also{
-  transform: translate(250px, 70px);
+  transform: translate(15.625rem, 4.375rem);
 }
 
 .scroll-indicator {
     position: fixed;
-    right: 20px;
+    right: 1.25rem;
     top: 35%;
     transform: translate(-50%);
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5rem;
 }
 .scroll-indicator a{
-    padding: 10px;
+    padding: 0.625rem;
     position: relative;
 }
 
 .scroll-indicator a::after {
     content: "";
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 50%;
     background: #410807;
     top: 50%;
@@ -234,13 +245,13 @@ section > p {
 .scroll-indicator a::before{
     content: attr(data-section);
     position: absolute;
-    right: 24px;
+    right: 1.5rem;
     top: 50%;
-    transform: translate(4px,-55%);
+    transform: translate(0.25rem,-55%);
     color:#410807;
     font-weight: bold;
-    padding: 2px 16px;
-    font-size: 17px;
+    padding: 0.125rem 1rem;
+    font-size: 1.063rem;
     pointer-events: none;
     opacity: 0;
     transition: all 400ms ease;
@@ -261,12 +272,12 @@ section > p {
 }
 
 #interface {
-  padding-top: 50px;
+  padding-top: 3.125rem;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  gap: 8px; 
-  padding-right: 0.5px;
+  gap: 0.5rem; 
+  padding-right: 0.031rem;
 }
 #guessList{
   text-align: left;
@@ -274,10 +285,65 @@ section > p {
 
 .interactive {
   font-family: "Space Grotesk", sans-serif;
-  width: 270px;      
-  height: 40px;     
-  font-size: 16px;   
-  padding: 8px;      
+  width: 16.875rem;      
+  height: 2.5rem;     
+  font-size: 1rem;   
+  padding: 0.5rem;      
   box-sizing: border-box; 
 }
+
+@media (min-width: 1700px){
+  h1{
+    font-size: 6rem;
+  }
+
+  .content > h1{
+    max-width: 32.25rem;
+    font-size: 4rem;
+  }
+  .heading > h1{
+    font-size: 4rem;
+  }
+  .heading > p{
+    font-size: 1.2rem;
+  }
+
+  section > p {
+    width: 36.5rem;
+    padding-left: 14.25rem;
+    padding-top: 1.875rem;
+    font-size: 1.2rem;
+  }
+
+  .above h1, .bellow h1, .list a {
+    font-size: 7rem;
+  }
+  #mail{
+    font-size: 5rem;
+  }
+
+  .list{
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 14.25rem;
+  }
+  #also{
+    font-size: 1.098rem;
+  }
+
+  #also{
+    transform: translate(16.625rem, 5.375rem);
+  }
+
+  .scroll-indicator a::before{
+ 
+    padding: 0.125rem 1.8rem;
+    font-size: 1.2rem;
+
+  }
+}
+
+
+
+
 

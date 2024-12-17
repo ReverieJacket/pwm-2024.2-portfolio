@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Responsivo</title>
+    <link rel="stylesheet" href="/css/alert-page.css">
+</head>
+<body>
+    <div id="wrapper">
+    <header>
+        <div class="logo">MARCUS</div>
+        <div class="social-icons">
+            <a class="social" href="https://www.linkedin.com/in/marcus-vinicius-gon%C3%A7alves-94865b250/"> <img src="/imagens/linkedin.png"></a> 
+            <a class="social" href="https://github.com/ReverieJacket"><img src="/imagens/github.png"></a> 
+            <a class="social" href="https://www.instagram.com/reverie.jacket/profilecard/?igsh=NGUxNnptcGR4cm0z"><img src="/imagens/instagram.png"></a> 
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>O portfólio está no processo de se tornar responsivo. Por favor, acesse por um navegador de um computador ou aumente a resolução da janela.</h1>
+        <button class="button" onclick="window.location.href='mailto:reveriejacket@hotmail.com'">
+            Enviar e-mail
+        </button>
+        
+    </div>
+</div>
+    <script>
+        function checkResolution() {
+              if (window.innerWidth >= 1500 && window.innerHeight >= 582) {
+                window.location.href = "../index.html"; // Caminho correto para a página principal
+              }
+            }
+        
+            // Função debounce para evitar redirecionamentos contínuos
+            let debounce;
+            window.addEventListener("resize", () => {
+              clearTimeout(debounce);
+              debounce = setTimeout(checkResolution, 200);
+            });
+        
+            // Verifica ao carregar a página
+            checkResolution();
+              </script>
+</body>
+</html>

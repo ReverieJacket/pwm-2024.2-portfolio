@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #F2E4DA;
+    color: #36D1DC;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #410807;
+}
+
+.social-icons a {
+    margin: 0 15px;
+}
+.social img{
+    width: 30px;
+    height: 30px;
+}
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #410807;
+    max-width: 90%;
+}
+
+
+.button {
+    background: linear-gradient(to right, #673c13, #5b3d0f);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    font-size: 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(to right, #422710, #372209);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        padding: 10px 25px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 24px;
+    }
+    .content{
+        padding: 0;
+    }
+
+    .button {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin: 0 8px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) and (orientation: portrait) {
+    .social img {
+        width: 90px;
+        height: 90px;
+    }
+    .logo{
+        font-size: 60px;
+    }
+
+    .content{
+        gap: 60px;
+    }
+
+    .content h1 {
+        font-size: 70px; /* Ajusta o tamanho do texto */
+    }
+
+    .button {
+        padding: 44px 65px; /* Aumenta o tamanho do botão */
+        font-size: 30px;
+    }
+}
